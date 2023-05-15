@@ -1,28 +1,27 @@
 /**
-    3. Longest Substring Without Repeating Characters
+   3. Longest Substring Without Repeating Characters
+   Link: https://leetcode.com/problems/longest-substring-without-repeating-characters/
 
-    Given a string s, find the length of the longest 
-    substring
-    without repeating characters.
+   Given a string s, find the length of the longest substring without repeating characters.
 
-    
+   Example 1:
 
-    Example 1:
+   Input: s = "abcabcbb"
+   Output: 3
+   Explanation: The answer is "abc", with the length of 3.
 
-    Input: s = "abcabcbb"
-    Output: 3
-    Explanation: The answer is "abc", with the length of 3.
-    Example 2:
+   Example 2:
 
-    Input: s = "bbbbb"
-    Output: 1
-    Explanation: The answer is "b", with the length of 1.
-    Example 3:
+   Input: s = "bbbbb"
+   Output: 1
+   Explanation: The answer is "b", with the length of 1.
 
-    Input: s = "pwwkew"
-    Output: 3
-    Explanation: The answer is "wke", with the length of 3.
-    Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
+   Example 3:
+
+   Input: s = "pwwkew"
+   Output: 3
+   Explanation: The answer is "wke", with the length of 3.
+   Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
 */
 
 impl Solution {
@@ -30,7 +29,6 @@ impl Solution {
         if s == "" {
             return 0;
         }
-
 
         let mut alph_map: [i32; 256] = [-1; 256];
 
@@ -40,7 +38,7 @@ impl Solution {
 
         alph_map[s.chars().nth(0).unwrap() as i32 as usize] = 0;
 
-        for (index, chr) in s[1 .. s.len()].chars().enumerate() {
+        for (index, chr) in s[1..s.len()].chars().enumerate() {
             let mut x: usize = chr as i32 as usize;
             // println!("index: {}, current_char: {}, prev unchanged index: {}, curr unchanged len: {}, max unchanged len: {}", index + 1, chr, prev_unchanged, curr_unchanged, max_unchanged);
 
@@ -59,6 +57,6 @@ impl Solution {
             }
         }
 
-        return max_unchanged;     
+        return max_unchanged;
     }
 }
