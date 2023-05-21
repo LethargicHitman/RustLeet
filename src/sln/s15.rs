@@ -30,7 +30,7 @@
 
     Constraints:
     3 <= nums.length <= 3000
-    -105 <= nums[i] <= 105
+    -10^5 <= nums[i] <= 10^5
 */
 use std::collections::HashSet;
 
