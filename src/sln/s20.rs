@@ -45,6 +45,9 @@ impl Solution {
             if sb[i] == o1 || sb[i] == o2 || sb[i] == o3 {
                 v.push(sb[i]);
             } else {
+                if v.len() == 0 {
+                    return false;
+                }
                 let x = v[v.len() - 1];
                 if (x == o1 && sb[i] == c1) || (x == o2 && sb[i] == c2) || (x == o3 && sb[i] == c3)
                 {
@@ -56,6 +59,10 @@ impl Solution {
             }
         }
 
-        return true;
+        if v.len() == 0 {
+            return true;
+        }
+
+        return false;
     }
 }
