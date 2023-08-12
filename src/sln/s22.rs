@@ -1,6 +1,6 @@
 /**
    22. Generate Parentheses
-   Link: https://leetcode.com/problems/generate-parentheses
+   Link: https://leetcode.com/problems/generate-parentheses/
 
    Medium
    Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
