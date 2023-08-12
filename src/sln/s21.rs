@@ -1,6 +1,6 @@
 /**
    21. Merge Two Sorted Lists
-   Link: https://leetcode.com/problems/merge-two-sorted-lists
+   Link: https://leetcode.com/problems/merge-two-sorted-lists/
 
    Easy
 
