@@ -45,6 +45,9 @@ impl Solution {
         let mut dummy_head = Some(Box::new(ListNode { val: 0, next: head }));
         let mut length = 0;
 
+        // calculate length of linked list
+        // the extra brace adds a scope
+        // coming out of the scope will drop the mutable reference
         {
             let mut curr = dummy_head.as_ref();
             while curr.unwrap().next.is_some() {
