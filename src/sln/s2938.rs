@@ -34,17 +34,14 @@
  */
 impl Solution {
     pub fn minimum_steps(s: String) -> i64 {
-        let mut zero_list: Vec<usize> = Vec::new();
+        let mut next_zero: usize = 0;
+        let mut count: usize = 0;
         for (index, chr) in s.chars().enumerate() {
             if chr == '0' {
-                zero_list.push(index);
+                count += (index - next_zero);
+                next_zero += 1;
             }
         }
-        let mut count: usize = 0;
-        for index in (0 .. zero_list.len()) {
-            count += (zero_list[index] - index);            
-        }
-
         return count as i64;
     }
 }
